@@ -14,7 +14,8 @@ class Solution:
                 # Find the indices in the original array
                 index1 = nums.index(num2[left])
                 # To handle duplicates, remove the first found element to find the next
-                nums[index1] = float('inf')  # Set the found index to an unreachable value
+                nums[index1] = float('inf')  # Set the found index to an unreachable value, TO HANDLE THE SAME VALUES AS INDEX FETCH FIRST VALUE ONLY SO WE MADE FIRST INACCESSIBLE
+                # TO GET THE SECOND
                 index2 = nums.index(num2[right])
                 return [index1, index2]
             elif current_sum > target:
